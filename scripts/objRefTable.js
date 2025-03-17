@@ -1,0 +1,73 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.Sprite,
+		C3.Behaviors.Platform,
+		C3.Behaviors.scrollto,
+		C3.Behaviors.bound,
+		C3.Plugins.TiledBg,
+		C3.Behaviors.solid,
+		C3.Behaviors.Sin,
+		C3.Plugins.Keyboard,
+		C3.Behaviors.destroy,
+		C3.Behaviors.Physics,
+		C3.Behaviors.jumpthru,
+		C3.Plugins.System.Cnds.IsGroupActive,
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Plugins.Sprite.Acts.SetMirrored,
+		C3.Plugins.Sprite.Cnds.OnCollision,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.Sprite.Acts.SetPos,
+		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.System.Acts.Wait,
+		C3.Behaviors.solid.Acts.SetEnabled,
+		C3.Plugins.System.Acts.NextPrevLayout,
+		C3.Plugins.Sprite.Acts.AddChild,
+		C3.Plugins.Sprite.Cnds.IsOverlapping,
+		C3.Plugins.Sprite.Acts.Spawn,
+		C3.Behaviors.Platform.Acts.SetIgnoreInput
+	];
+};
+self.C3_JsPropNameTable = [
+	{Platform: 0},
+	{ScrollTo: 0},
+	{BoundToLayout: 0},
+	{LuffyMain: 0},
+	{Solid: 0},
+	{Ground1: 0},
+	{Sine: 0},
+	{PGupandDown: 0},
+	{Obstacle1: 0},
+	{Keyboard: 0},
+	{Spikes: 0},
+	{EndGame: 0},
+	{DestroyOutsideLayout: 0},
+	{Physics: 0},
+	{EndGameCelebration: 0},
+	{Jumpthru: 0},
+	{Ground2: 0},
+	{PBsidetoside: 0},
+	{NextLevel: 0},
+	{Collectible: 0},
+	{TiledBackground: 0},
+	{Collectible2: 0},
+	{LuffyGearTwo: 0}
+];
+
+self.InstanceType = {
+	LuffyMain: class extends self.ISpriteInstance {},
+	Ground1: class extends self.ITiledBackgroundInstance {},
+	PGupandDown: class extends self.ITiledBackgroundInstance {},
+	Obstacle1: class extends self.ITiledBackgroundInstance {},
+	Keyboard: class extends self.IInstance {},
+	Spikes: class extends self.ITiledBackgroundInstance {},
+	EndGame: class extends self.ISpriteInstance {},
+	EndGameCelebration: class extends self.ISpriteInstance {},
+	Ground2: class extends self.ITiledBackgroundInstance {},
+	PBsidetoside: class extends self.ITiledBackgroundInstance {},
+	NextLevel: class extends self.ISpriteInstance {},
+	Collectible: class extends self.ISpriteInstance {},
+	TiledBackground: class extends self.ITiledBackgroundInstance {},
+	Collectible2: class extends self.ISpriteInstance {},
+	LuffyGearTwo: class extends self.ISpriteInstance {}
+}
